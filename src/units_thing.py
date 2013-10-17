@@ -33,7 +33,6 @@ class UnitsThing(object):
             new_units.subtract(x.units)
             return UnitsThing(self.measure / x.measure, new_units)
         else:
-            print self.measure
             return UnitsThing(self.measure / x, self.units.copy())
     def __plus__(self, x):
         assert type(x) is UnitsThing
